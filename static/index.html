@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>devtask-89739 - Developer Task Tracker with Time Logging</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">devtask-89739</div>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="/static/login.html" class="btn btn-ghost">Log in</a>
+        <a href="/static/signup.html" class="btn btn-primary">Sign up</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Ship faster with a focused dev task tracker.</h1>
+          <p>devtask-89739 combines lightweight task management with accurate time logging so developers can see exactly where their time goes.</p>
+          <div class="hero-actions">
+            <a href="/static/signup.html" class="btn btn-primary">Get started</a>
+            <a href="#pricing" class="btn btn-ghost">View pricing</a>
+          </div>
+          <p class="hero-subtext">No credit card required for the free trial.</p>
+        </div>
+        <div class="hero-panel">
+          <h2>At-a-glance productivity</h2>
+          <ul class="hero-list">
+            <li>Create tasks in seconds with keyboard-first workflow.</li>
+            <li>Log time as you work and keep estimates honest.</li>
+            <li>Filter by project, status, or date to unblock standups.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <h2 class="section-title">Built for developers and small teams</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>Task pipeline</h3>
+            <p>Simple TODO → In progress → Done workflow so you can see what's on your plate at a glance.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Time logging</h3>
+            <p>Attach hours to every task and understand where your week actually went.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Developer friendly API</h3>
+            <p>FastAPI-powered JSON API so you can integrate tasks with your own tools and scripts.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Secure by default</h3>
+            <p>JWT-based authentication and per-user task isolation keep your data safe.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Simple, transparent pricing</h2>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>Solo Dev</h3>
+            <p class="price">$9<span>/month</span></p>
+            <ul class="pricing-features">
+              <li>Unlimited tasks</li>
+              <li>Unlimited time logs</li>
+              <li>Email support</li>
+            </ul>
+            <a href="{{STRIPE_MONTHLY_PAYMENT_LINK}}" class="btn btn-primary">Start monthly plan</a>
+          </div>
+          <div class="pricing-card pricing-card--highlight">
+            <h3>Team</h3>
+            <p class="price">$79<span>/year</span></p>
+            <ul class="pricing-features">
+              <li>Up to 10 team members</li>
+              <li>Shared task boards</li>
+              <li>Priority support</li>
+            </ul>
+            <a href="{{STRIPE_YEARLY_PAYMENT_LINK}}" class="btn btn-primary">Start yearly plan</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container">
+        <h2 class="section-title">Frequently asked questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>Is there a free trial?</h3>
+            <p>Yes. Every new account starts with a trial so you can invite your team, create tasks, and see if devtask-89739 fits your workflow.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can I cancel anytime?</h3>
+            <p>Absolutely. You can upgrade, downgrade, or cancel your subscription at any time from your billing settings.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you offer an API?</h3>
+            <p>Yes. devtask-89739 is powered by a FastAPI backend with JWT auth so you can integrate it into your own tools.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Where is my data stored?</h3>
+            <p>Your data is stored in a secure managed database. We never sell your data and you can request an export at any time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> devtask-89739. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

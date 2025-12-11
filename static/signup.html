@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign up - devtask-89739</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body class="auth-body">
+  <main class="auth-container">
+    <section class="auth-card">
+      <h1>Create your account</h1>
+      <form id="signup-form" class="auth-form">
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Password
+          <input type="password" name="password" required minlength="6" />
+        </label>
+        <button type="submit" class="btn btn-primary btn-full">Sign up</button>
+        <p class="auth-alt">Already have an account? <a href="/static/login.html">Log in</a></p>
+        <p id="signup-error" class="auth-error" hidden></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
